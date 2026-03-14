@@ -2,7 +2,9 @@ MIDlet-Name: Demo
 MIDlet-Version: 1.0
 MIDlet-Vendor: Example
 MIDlet-1: Demo,,MainMIDlet
+MIDlet-Description: Built from the forkable starter AbhyasKanaujia/j2me-boilerplate
+X-Source-Repo: github.com/AbhyasKanaujia/j2me-boilerplate
 MicroEdition-Configuration: CLDC-1.1
 MicroEdition-Profile: MIDP-2.0
 MIDlet-Jar-URL: dist/app.jar
-MIDlet-Jar-Size: 4882
+MIDlet-Jar-Size: 7417

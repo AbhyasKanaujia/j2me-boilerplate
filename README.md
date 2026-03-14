@@ -1,6 +1,8 @@
-# J2ME Boilerplate
+# AbhyasKanaujia/j2me-boilerplate
 
-A shareable Java ME boilerplate with explicit requirements, minimal automation, and deterministic setup.
+A forkable J2ME starter kit. Clone it, run it, and start editing in minutes.
+
+Built from the forkable starter: `AbhyasKanaujia/j2me-boilerplate`
 
 ## Design Goals
 
@@ -33,7 +35,7 @@ unzip -v
 ## Quick Start
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AbhyasKanaujia/j2me-boilerplate.git
 cd j2me-boilerplate
 make setup
 make run
@@ -41,17 +43,17 @@ make run
 
 ## Start Here
 
-1. Fork this repository on GitHub.
-2. Clone your fork and run the app.
+1. Clone the upstream repo if you just want to try the starter.
 
 ```bash
-git clone <your-fork-url>
+git clone https://github.com/AbhyasKanaujia/j2me-boilerplate.git
 cd j2me-boilerplate
 make setup
 make run
 ```
 
-3. Start editing these files:
+2. Fork the repo on GitHub when you want your own project history.
+3. Clone your fork and start editing these files:
    - `src/MainMIDlet.java` for app UI and interaction logic
    - `app.jad` for app name/version/vendor metadata
    - `Makefile` only if you want to change build behavior
