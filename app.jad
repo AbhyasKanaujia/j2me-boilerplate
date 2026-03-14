@@ -1,0 +1,8 @@
+MIDlet-Name: Demo
+MIDlet-Version: 1.0
+MIDlet-Vendor: Example
+MIDlet-1: Demo,,MainMIDlet
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Jar-URL: app.jar
+MIDlet-Jar-Size: 0
