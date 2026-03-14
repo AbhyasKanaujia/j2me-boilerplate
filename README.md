@@ -39,6 +39,29 @@ make setup
 make run
 ```
 
+## Start Here
+
+1. Fork this repository on GitHub.
+2. Clone your fork and run the app.
+
+```bash
+git clone <your-fork-url>
+cd j2me-boilerplate
+make setup
+make run
+```
+
+3. Start editing these files:
+   - `src/MainMIDlet.java` for app UI and interaction logic
+   - `app.jad` for app name/version/vendor metadata
+   - `Makefile` only if you want to change build behavior
+
+### First Customization Checklist
+
+- Rename metadata values in `app.jad`.
+- Replace welcome text and commands in `src/MainMIDlet.java`.
+- Run `make run` and confirm your updated MIDlet launches.
+
 ## Commands
 
 ```bash

@@ -5,4 +5,4 @@ MIDlet-1: Demo,,MainMIDlet
 MicroEdition-Configuration: CLDC-1.1
 MicroEdition-Profile: MIDP-2.0
 MIDlet-Jar-URL: dist/app.jar
-MIDlet-Jar-Size: 788
+MIDlet-Jar-Size: 4882
