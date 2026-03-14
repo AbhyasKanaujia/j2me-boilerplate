@@ -52,8 +52,8 @@ make setup
 make run
 ```
 
-2. Fork the repo on GitHub when you want your own project history.
-3. Clone your fork and start editing these files:
+1. Fork the repo on GitHub when you want your own project history.
+2. Clone your fork and start editing these files:
    - `src/MainMIDlet.java` for app UI and interaction logic
    - `app.jad` for app name/version/vendor metadata
    - `Makefile` only if you want to change build behavior
@@ -92,6 +92,4 @@ make clean  # remove generated artifacts
 
 ## Screenshot
 
-Add a screenshot at `docs/emulator.png` and uncomment:
-
-<!-- ![Emulator screenshot](docs/emulator.png) -->
+![Emulator screenshot](docs/emulator.png)
