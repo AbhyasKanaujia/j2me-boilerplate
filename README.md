@@ -1,21 +1,34 @@
 # J2ME Boilerplate
 
-Minimal Java ME project that compiles and runs a MIDlet through a single Makefile interface.
+A shareable Java ME boilerplate with explicit requirements, minimal automation, and deterministic setup.
 
-## Features
+## Design Goals
 
-- J2ME Wireless Toolkit setup script
-- End-to-end build pipeline (`compile -> preverify -> jar`)
-- Sample `MainMIDlet` that renders a basic form
-- Emulator launch with one command
+- Explicit requirements: fail fast with actionable errors
+- Minimal automation: only automate project-local dependencies
+- Deterministic setup: pinned tool versions and a single emulator path
 
-## Repository Layout
+## Prerequisites
 
-- `src/` Java source code
-- `build/` transient class/preverify output
-- `dist/` generated JAR output
-- `tools/` downloaded toolkit files
-- `scripts/` setup automation
+Install these before running `make setup`:
+
+- `java`, `javac`, `jar` (JDK required, recommended: Temurin/OpenJDK 17)
+- `curl`
+- `unzip`
+
+Detailed Java install instructions:
+
+- `docs/java-setup.md`
+
+Quick check:
+
+```bash
+java -version
+javac -version
+jar --help >/dev/null
+curl --version
+unzip -v
+```
 
 ## Quick Start
 
@@ -26,24 +39,34 @@ make setup
 make run
 ```
 
-## Build Commands
+## Commands
 
 ```bash
-make help   # show available commands
-make setup  # download/extract J2ME toolkit
-make build  # compile + preverify + package
-make run    # build and launch emulator
-make clean  # remove generated files
+make help   # command list
+make setup  # install pinned project toolchain
+make build  # compile -> preverify -> package
+make run    # build and run in MicroEmulator
+make doctor # show prerequisites and toolchain status
+make clean  # remove generated artifacts
 ```
 
-## Notes
+## Toolchain (Pinned)
 
-- This boilerplate uses Sun Java Wireless Toolkit 2.5.2.
-- `make build` updates `MIDlet-Jar-Size` in `app.jad` automatically.
-- The Makefile is the primary abstraction layer so everyday usage stays simple.
+- Eclipse ECJ `3.38.0`
+- CLDC API stubs `2.0.4`
+- MIDP API stubs `2.0.4`
+- ProGuard `7.8.2` (`-microedition` preverification)
+- MicroEmulator Swing `2.0.0`
+
+## Build Pipeline
+
+1. `compile` compiles MIDlet sources against CLDC/MIDP stubs
+2. `preverify` runs ProGuard in microedition mode
+3. `jar` writes `dist/app.jar` and updates JAD fields
+4. `run` launches MicroEmulator with `app.jad`
 
 ## Screenshot
 
-Add an emulator screenshot at `docs/emulator.png`, then uncomment this line:
+Add a screenshot at `docs/emulator.png` and uncomment:
 
-<!-- ![J2ME emulator screenshot](docs/emulator.png) -->
+<!-- ![Emulator screenshot](docs/emulator.png) -->
